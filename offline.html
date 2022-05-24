@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Offline guide on PC - yell0wsuit</title>
+        <link rel="stylesheet" href="css/css-style.css">
+        <link href="css/css-pro.min.css" rel="stylesheet">
+        <link href="css/css-bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="js/scripts-jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class="fal fa-bars" id="btn"></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="index.html">
+                    <i class="fal fa-home-alt"></i>
+                    <span class="links_name">Homepage</span>
+                    </a>
+                    <span class="tooltipcustom">Homepage</span>
+                </li>
+                <li aria-selected="true" class="active selected">
+                    <a href="html5-games.html">
+                    <i class="fal fa-gamepad"></i>
+                    <span class="links_name">Games</span>
+                    </a>
+                    <span class="tooltipcustom">Games</span>
+                </li>
+                <li>
+                    <a href="english.html">
+                    <i class="fal fa-book-alt"></i>
+                    <span class="links_name">Oxford learning tools</span>
+                    </a>
+                    <span class="tooltipcustom">Oxford learning tools</span>
+                </li>
+                <li>
+                    <a href="https://yell0wsuit.rf.gd/">
+                    <i class="fal fa-pen-alt"></i>
+                    <span class="links_name">Blog (external page)</span>
+                    </a>
+                    <span class="tooltipcustom">Blog (external page)</span>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper d-flex align-items-stretch">
+            <div id="content" class="p-4 p-md-5">
+                <h1 class="mb-4">Offline guide on PC</h1>
+                <p>The guide below is for Windows (Windows 10 or 11 is recommended). Other PC operating systems may have different ways of installing Python.</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 mb-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="mb-4">
+                                    In order to run the games offline (if they don't require an active Internet connection), you need to create a local server.
+                                </p>
+                                <p class="mb-4">
+                                    1. <a href="https://www.ics.uci.edu/~pattis/common/handouts/pythoneclipsejava/python.html" target="_blank">Follow this guide to install Python <i class="fal fa-external-link"></i></a>. Remember to choose "Add Python to PATH".
+                                </p>
+                                <p class="mb-4">
+                                    2. Open command prompt by pressing the <kbd>&#8862; Win</kbd> + <kbd>R</kbd>, then type <code>cmd</code>.<br>(Or install <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701" target="_blank">Windows Terminal</a> <i class="fal fa-external-link"></i> from Microsoft Store and search it in the Start menu on Windows 10/11.)
+                                </p>
+                                <p class="mb-4">
+                                    <img class="card-img" src="images/ITiQEcD.png">
+                                </p>
+                                <p class="mb-4">
+                                    3. Visit <a href="https://archive.org/details/yell0wsuit-html5-games">this link</a> <i class="fal fa-external-link"></i> to download.
+                                </p>
+                                <p class="mb-4">
+                                    4. Extract the ZIP file to your favorite location, and copy/remember that location for the next step.
+                                </p>
+                                <p class="mb-4">
+                                    5. Back to command prompt. If the location is in the same drive as what's shown on the screen (<code>C:\</code> for example), just type <code>cd [your location here]</code>. Otherwise, you need to type an extra command, <code>[drive name here without "\"]</code>. Example:
+                                </p>
+                                <p class="mb-4">
+                                    <img class="card-img" src="images/ZNYOB7Q.png">
+                                </p>
+                                <p class="mb-4">
+                                    6. Enter <code>python -m http.server</code>. Wait until it shows <code>Serving HTTP on :: port 8000 (http://[::]:8000/) ...</code> (the port number may vary).
+                                </p>
+                                <p class="mb-4">
+                                    7. Visit <a href="http://localhost:8000">http://localhost:8000</a> (default) on your browser. It should be working now.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer-custom bg-primary text-white mb-5">
+                    <!-- Copyright -->
+                    <div class="text-center p-3" style="background-color: #2d7d9a; border-radius: 4px">
+                        Website made by yell0wsuit.
+                    </div>
+                    <!-- Copyright -->
+                </footer>
+            </div>
+        </div>
+        <div id="ms-spinner" class="fullscreen show" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            <div slot="indeterminate">
+                <svg class="spinner-svg" viewbox="0 0 16 16">
+                    <circle class="outer-circle" cx="8px" cy="8px" r="7px"></circle>
+                    <circle class="inner-circle inner-circle-animation" cx="8px" cy="8px" r="7px"></circle>
+                </svg>
+            </div>
+        </div>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2d7d9a"></circle>
+        
+        <script src="js/scripts-script.js"></script>
+        <script type="text/javascript">
+            $(window).on('load', function() {
+              if ($('#ms-spinner').length > 0) {
+                $('#ms-spinner').removeClass('show');
+              }
+            });
+        </script>
+    </body>
+</html>
